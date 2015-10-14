@@ -1,0 +1,387 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+input[type="text"]{
+      width: 100% !important;
+}
+
+.custom {
+  width: 200px;
+}
+
+h3,  .h3 {
+    font-size: 16px !important;
+}
+textarea{
+    width: 70%;
+    height: 5%;
+    -webkit-appearance: textfield;
+    padding: 1px;
+    background-color: white;
+    border: 2px inset;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    -webkit-rtl-ordering: logical;
+    -webkit-user-select: text;
+    cursor: auto;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow:0 0 0 50px white inset;
+}
+
+input:-webkit-autofill:focus {
+    -webkit-box-shadow:0 0 0 50px white inset;
+    -webkit-text-fill-color: #333;
+}
+
+tr.last td {
+    padding-top: 2% !important;
+    border-color: #FFFFFF !important;
+}
+
+.glyphicon{
+color: #2E6DA4;
+}
+
+.input-group{
+  width: 100%;
+}
+
+.ui-datepicker-trigger{cursor:pointer}
+
+h2{
+margin: 30px 0;
+padding: 50px 200px 15px 0;
+border-bottom: 2px solid #E5E5E5;
+}
+#newH2{
+font-size :30px;
+margin: 30px 0;
+padding: 50px 200px 15px 0;
+
+}
+
+.col-md-6.col-md-offset-3{
+    padding-bottom: 50px;
+    margin-left: 10%;
+}
+
+.yield{
+  padding-top:60px;
+  padding-bottom:80px;
+  padding-right:100px;
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+div.yield{
+  float: left;
+  width: 70%;
+  padding-left: 100px;
+}
+
+.login{
+  float: left;
+  width: 100%;
+}
+
+.navbar-fixed-top{
+  //background-color: #000000 !important;
+}
+
+.btn-block-index{
+  border-radius: 24px;
+  width: 70%;
+}
+.btn-primary{
+  background-color: #5993C4;
+}
+
+* {
+margin: 0;
+padding: 0px;
+outline: none;
+border-radius: 4px !important;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+body {
+    color: #444;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    height: auto !important;
+    height: 100%;
+    min-height: 100%;
+    text-rendering: optimizeLegibility;
+    background: #DADADA;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+}
+
+.datepicker{
+padding: 1px !important;
+}
+
+div.wrapper {
+  float: left;
+  padding-top: 60px;
+  width: 260px;
+}
+
+nav.vertical {
+  border-radius: 4px;
+  overflow: hidden;
+  text-align: center;
+  height: 780px;
+}
+nav.vertical > ul {
+    list-style-type: none;
+    margin-top: 6%;
+    margin-bottom: 90%;
+  }
+
+nav.vertical > ul > li {
+      display: block;
+    }
+
+nav.vertical > ul > li > label,
+nav.vertical > ul > li > a {
+        background: linear-gradient(to right, rgb(0, 0, 0), rgb(77, 77, 77));
+        border-bottom: 1px solid rgba(255,255,255,.1);
+        color: #ffffff;
+        display: block;
+        font-size: .85rem;
+        font-weight: 500;
+        height: 50px;
+        letter-spacing: .5rem;
+        line-height: 50px;
+        text-shadow: 0 1px 1px rgba(0,0,0,.1);
+        text-transform: uppercase;
+        transition: all .1s ease;
+      }
+
+nav.vertical > ul > li > label:hover,
+nav.vertical > ul > li > a:hover {
+         background: #245580;
+         cursor: pointer;
+        }
+
+nav.vertical > ul > li > label + input {
+          display: none;
+          visibility: hidden;
+        }
+
+nav.vertical > ul > li > div {
+            background-color: rgb(255,255,255);
+            max-height: 0;
+            overflow: hidden;
+            transition: all .5s linear;
+          }
+
+nav.vertical > ul > li > label + input:checked + div {
+              max-height: 500px;
+            }
+
+nav.vertical > ul > li > div > ul {
+            list-style-type: none;
+          }
+nav.vertical > ul > li > div > ul > li > a {
+             background-color: rgb(255,255,255);
+             border-bottom: 1px solid rgba(0,0,0,.05);
+             color: #333331;
+             display: block;
+             font-size: 1.1rem;
+             padding: 10px 0;
+             text-decoration: none;
+             transition: all 0.15s linear;
+            }
+
+nav.vertical > ul > li > div > ul > li:hover > a {
+                background-color: lightBlue;
+                color: rgb(255,255,255);
+                padding: 10px 0 10px 50px;
+}
+
+.navbar  {
+  font-family: "Myriad Set Pro","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-size: 15px;
+    color:  #fff !important
+}
+.nav a :hover{
+  color: #999999
+
+}
+.navbar-header a{
+  font-size:24px;
+}
+.navbar-header a:hover{
+  color: #999999 !important;
+}
+.navbar-brand{
+  color:white !important;
+}
+
+li.dropdown a.navbar-brand {
+  font-size: 16px !important;
+  color:white !important;
+}
+
+li.dropdown a.navbar-brand :hover {
+  color: #999999 !important;
+}
+
+.navbar-nav a {
+  color: white !important;
+}
+.navbar-nav a:hover {
+  color: #999999 !important;
+}
+.navbar-default a{
+  color: black !important;
+}
+
+#flash {
+ float: right;
+ width: 500px;
+ position: absolute;
+ right: 0;
+ }
+
+
+.test.nav.navbar-nav{
+padding-top: 13px;
+}
+
+.test.nav.navbar-nav li:hover {
+color: #999999 !important;
+}
+
+.bootstrap-timepicker-widget table td a {
+  border:1px solid transparent;
+  display:inline-block;
+  margin:0;
+  outline:0;
+  padding:8px 0;
+  width:100%;
+  color:#000000 !important;
+}
+
+.login{
+  padding-left: 10%;
+}
+
+.scroll-top-wrapper {
+    position: fixed;
+	opacity: 0;
+	visibility: hidden;
+	overflow: hidden;
+	text-align: center;
+	z-index: 99999999;
+    background-color: #777777;
+	color: #eeeeee;
+	width: 50px;
+	height: 48px;
+	line-height: 48px;
+	right: 30px;
+	bottom: 30px;
+	padding-top: 2px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+.scroll-top-wrapper:hover {
+	background-color: #888888;
+}
+
+.scroll-top-wrapper.show {
+    visibility:visible;
+    cursor:pointer;
+	opacity: 1.0;
+}
+
+.scroll-top-wrapper i.fa {
+	line-height: inherit;
+}
+
+input[type="checkbox"]{
+  margin: 4px 10px 0 !important;
+}
+
+.dropdown > .dropdown-menu{
+  background-color: black !important;
+}
+
+.dropdown:hover{
+  color: white !important;
+}
+
+.border {
+border: 1px solid grey;
+width: 100%;
+}
+
+[data-bip-value*="Please have a look on Apple Directory"]{
+  color:chocolate !important;
+}
+
+table
+{
+    table-layout: fixed;
+    width: 500px;
+}
+table td
+{
+  word-break: break-all;
+}
+
+/* User sign in and sign forms. */
+.border-form-div {
+  max-width: 300px;
+  padding: 19px 29px 29px;
+  margin: 0 auto 20px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+          box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+.border-form-div .form-signin-heading,
+.border-form-div .checkbox {
+  margin-bottom: 10px;
+}
+.border-form-div input[type="text"],
+.border-form-div input[type="email"],
+.border-form-div input[type="password"] {
+  font-size: 16px;
+  height: auto;
+  margin-bottom: 15px;
+  padding: 7px 9px;
+}
+
+.container-fluid{
+ padding-left: 100px;
+}

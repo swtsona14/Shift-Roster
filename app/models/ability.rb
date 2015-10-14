@@ -3,12 +3,12 @@ class Ability
 
   def initialize(user)
 
-    user ||= User.new # guest user (not logged in)
-    if user.email == 'sonali14@tcs.com' ?
-      can :manage, :all
-    else
-      can :read, :all
-    end
+        user ||= User.new # guest user (not logged in)
+        if user.email == 'sonali14@tcs.com'
+          can :manage, :all
+        else
+          can :read, :all
+        end
    end
     # Define abilities for the passed in user here. For example:
     #
@@ -36,5 +36,5 @@ class Ability
     #
     # See the wiki for details:
     # https://github.com/ryanb/cancan/wiki/Defining-Abilities
-  end
+  
 end
