@@ -1,0 +1,13 @@
+<h1> Welcome <%= current_user.name %> :) </h1>
+
+<% if user_signed_in? %>
+  <h3>You have successfully signed in</h3>
+  <%= link_to "List All User Details", users_path if current_user.email == 'sonali14@gmail.com' %></br>
+  <%= link_to "Edit User Details", edit_user_path(current_user.id) if current_user.email == 'sonali14@gmail.com'   %></br>
+  <%= link_to "Create Shift Details", new_shift_detail_path %></br>
+  <%= link_to "List My Shift Details", shift_details_path, :method => :get %></br>
+<% else %>
+  <h1>Welcome to rails</h1>
+  <%= link_to "Sign In", new_user_session_path, :method => :get %>
+  <%= link_to "Sign Up", new_user_registration_path, :method => :get %>
+<% end %>
