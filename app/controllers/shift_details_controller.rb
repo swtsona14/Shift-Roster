@@ -1,12 +1,19 @@
 class ShiftDetailsController < ApplicationController
   before_action :set_shift_detail, only: [:show, :edit, :update, :destroy]
-
+  respond_to :html, :js
   # GET /shift_details
   # GET /shift_details.json
   def index
+    if params[:id]
+      @shift_details = ShiftDetail.where(user_id: params[:id])
+    else
+      if current_user.email == 'sonali14@gmail.com'
+      @shift_details = ShiftDetail.all
+    else
     @shift_details = ShiftDetail.where(user: current_user)
+    end
+   end
   end
-
   # GET /shift_details/1
   # GET /shift_details/1.json
   def show
@@ -25,7 +32,10 @@ class ShiftDetailsController < ApplicationController
   # POST /shift_details.json
   def create
     @shift_detail = ShiftDetail.new(shift_detail_params)
-    @shift_detail.user = current_user
+    if current_user.email != "sonali14@gmail.com"
+       @shift_detail.user_id = current_user.id
+    end
+
     respond_to do |format|
       if @shift_detail.save
         format.html { redirect_to @shift_detail, notice: 'Shift detail was successfully created.' }
@@ -40,7 +50,7 @@ class ShiftDetailsController < ApplicationController
   # PATCH/PUT /shift_details/1
   # PATCH/PUT /shift_details/1.json
   def update
-    shift_detail_params[:users_id] = current_user.id
+    shift_detail_params[:user_id] = current_user.id
     respond_to do |format|
       if @shift_detail.update(shift_detail_params)
         format.html { redirect_to @shift_detail, notice: 'Shift detail was successfully updated.' }
@@ -70,6 +80,6 @@ class ShiftDetailsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def shift_detail_params
-      params.require(:shift_detail).permit(:start_time, :end_time, :shift_name, :description, :users_id)
+      params.require(:shift_detail).permit(:name, :start_time, :end_time, :shift_name, :description, :user_id)
     end
 end

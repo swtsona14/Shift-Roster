@@ -4,7 +4,7 @@ class Ability
   def initialize(user)
 
         user ||= User.new # guest user (not logged in)
-        if user.email == 'sonali14@tcs.com'
+        if user.email == 'sonali14@gmail.com'
           can :manage, :all
         else
           can :read, :all
@@ -36,5 +36,5 @@ class Ability
     #
     # See the wiki for details:
     # https://github.com/ryanb/cancan/wiki/Defining-Abilities
-  
+
 end

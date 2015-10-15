@@ -9,7 +9,7 @@
       <th>End time</th>
       <th>Shift name</th>
       <th>Description</th>
-      <th>Users</th>
+      <th>Users name</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -21,7 +21,7 @@
         <td><%= shift_detail.end_time %></td>
         <td><%= shift_detail.shift_name %></td>
         <td><%= shift_detail.description %></td>
-        <td><%= shift_detail.user.name %></td>
+        <td><%= shift_detail.user.try(:name) %></td>
         <td><%= link_to 'Show', shift_detail %></td>
         <td><%= link_to 'Edit', edit_shift_detail_path(shift_detail) %></td>
         <td><%= link_to 'Destroy', shift_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>

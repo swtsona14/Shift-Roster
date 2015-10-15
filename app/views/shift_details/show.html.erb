@@ -1,36 +1,32 @@
+<div class="col-md-6 col-md-offset-3"
 <p id="notice"><%= notice %></p>
-<div class="container">
 
-<h2>Listing Shift Details</h2>
+<p>
+  <strong>Name:</strong>
+  <%= @shift_detail.user.try(:name) %>
+</p>
 
-  <table class="table table-hover">
-    <thead>
-      <tr>
-        <th>Start time</th>
-        <th>End time</th>
-        <th>Shift name</th>
-        <th>Description</th>
-        <th>Users</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @shift_details.each do |shift_detail| %>
-        <tr>
-          <td><%= shift_detail.start_time %></td>
-          <td><%= shift_detail.end_time %></td>
-          <td><%= shift_detail.shift_name %></td>
-          <td><%= shift_detail.description %></td>
-          <td><%= shift_detail.user.name %></td>
-          <td><%= link_to 'Show', shift_detail %></td>
-          <td><%= link_to 'Edit', edit_shift_detail_path(shift_detail) %></td>
-          <td><%= link_to 'Destroy', shift_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+<p>
+  <strong>Start Time:</strong>
+  <%= @shift_detail.start_time %>
+</p>
+
+<p>
+  <strong>End Time:</strong>
+  <%= @shift_detail.end_time %>
+</p>
+
+<p>
+  <strong>Shift name:</strong>
+  <%= @shift_detail.shift_name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @shift_detail.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_shift_detail_path(@shift_detail), class: "btn btn-link" %> |
+<%= link_to 'Back', shift_details_path, class: "btn btn-link" %>
 </div>
-<br>
-
-
-<%= link_to 'Edit', edit_shift_detail_path(@shift_detail) %> |
-<%= link_to 'Back', shift_details_path %>
