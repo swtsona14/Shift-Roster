@@ -7,7 +7,8 @@ class Ability
         if user.email == 'sonali14@gmail.com'
           can :manage, :all
         else
-          can :read, :all
+          can [:edit,:update,:show],User, :id => user.id
+          can :manage, ShiftDetail, :user_id => user.id
         end
    end
     # Define abilities for the passed in user here. For example:

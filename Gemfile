@@ -33,6 +33,7 @@ gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'twitter-bootstrap-rails', '~> 3.2.0'
 gem 'capistrano', '~> 3.1'
 gem 'capistrano-rails', '~> 1.1'
+gem 'passenger'
 
 
 # Use ActiveModel has_secure_password
