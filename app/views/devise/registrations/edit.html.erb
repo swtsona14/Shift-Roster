@@ -13,10 +13,6 @@
     <%= f.label :email %>
     <%= f.email_field :email, class: "form-control" %> </br>
 
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-      <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %>
-    <% end %>
-
     <%= f.label :emp_id %>
     <%= f.text_field :emp_id, class: "form-control" %> </br>
 
