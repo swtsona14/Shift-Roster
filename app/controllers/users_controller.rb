@@ -1,16 +1,16 @@
 class UsersController < ApplicationController
   load_and_authorize_resource
   rescue_from CanCan::AccessDenied do |exception|
-    redirect_to root_url, :alert => exception.message
+    redirect_to root_url, alert: exception.message
   end
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   # GET /users
   # GET /users.json
   def index
-    #@users = User.all
-    @search =User.search do
+    # @users = User.all
+    @search = User.search do
       fulltext(params[:search])
-      #keywords params[:search]
+      # keywords params[:search]
     end
     @users = @search.results
   end
@@ -70,13 +70,14 @@ class UsersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_user
-      @user = User.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def user_params
-      params.require(:user).permit(:name, :mobile_no, :emp_id, :email, :password, :password_confirmation)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_user
+    @user = User.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def user_params
+    params.require(:user).permit(:name, :mobile_no, :emp_id, :email, :password, :password_confirmation)
+  end
 end

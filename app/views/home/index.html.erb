@@ -6,7 +6,7 @@
    <% if current_user.email == 'sonali14@gmail.com' %>
       <h2> Customized features : </h2>
          <%= link_to "List All User Details", users_path if current_user.email == 'sonali14@gmail.com' %></br>
-         <%= link_to "List All Shift Details", shift_details_path if current_user.email == 'sonali14@gmail.com' %></br>
+         <%= link_to "List All Shift Details", list_shift_details_path if current_user.email == 'sonali14@gmail.com' %></br>
       <h2> Personalized features : </h2>
          <%= link_to "Edit My User Details", edit_user_registration_path, :method => :get %></br>
          <%= link_to "Create My Shift Details", new_shift_detail_path, :method => :get %></br>

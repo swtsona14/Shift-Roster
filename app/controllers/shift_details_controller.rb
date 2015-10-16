@@ -4,16 +4,12 @@ class ShiftDetailsController < ApplicationController
   # GET /shift_details
   # GET /shift_details.json
   def index
-    if params[:id]
-      @shift_details = ShiftDetail.where(user_id: params[:id])
-    else
-      if current_user.email == 'sonali14@gmail.com'
-      @shift_details = ShiftDetail.all
-    else
-    @shift_details = ShiftDetail.where(user: current_user)
-    end
-   end
+      @shift_details = ShiftDetail.where(user: current_user)
   end
+
+def list
+      @shift_details = ShiftDetail.all
+end
   # GET /shift_details/1
   # GET /shift_details/1.json
   def show
@@ -32,8 +28,8 @@ class ShiftDetailsController < ApplicationController
   # POST /shift_details.json
   def create
     @shift_detail = ShiftDetail.new(shift_detail_params)
-    if current_user.email != "sonali14@gmail.com"
-       @shift_detail.user_id = current_user.id
+    if current_user.email != 'sonali14@gmail.com'
+      @shift_detail.user_id = current_user.id
     end
 
     respond_to do |format|
@@ -73,13 +69,14 @@ class ShiftDetailsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_shift_detail
-      @shift_detail = ShiftDetail.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def shift_detail_params
-      params.require(:shift_detail).permit(:name, :start_time, :end_time, :shift_name, :description, :user_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_shift_detail
+    @shift_detail = ShiftDetail.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def shift_detail_params
+    params.require(:shift_detail).permit(:name, :start_time, :end_time, :shift_name, :description, :user_id)
+  end
 end

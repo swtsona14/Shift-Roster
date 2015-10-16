@@ -7,7 +7,7 @@
 # server 'example.com', user: 'deploy', roles: %w{app web}, other_property: :other_value
 # server 'db.example.com', user: 'deploy', roles: %w{db}
 
-server 'localhost', user: 'controller', roles: %w{web app}, my_property: :my_value
+server 'localhost', user: 'controller', roles: %w(web app), my_property: :my_value
 
 # role-based syntax
 # ==================
@@ -21,10 +21,9 @@ server 'localhost', user: 'controller', roles: %w{web app}, my_property: :my_val
 # role :web, %w{user1@primary.com user2@additional.com}, other_property: :other_value
 # role :db,  %w{deploy@example.com}
 
-role :app, %w{controller@localhost}
-role :web, %w{controller@localhost}
-role :db, %w{controller@localhost}
-
+role :app, %w(controller@localhost)
+role :web, %w(controller@localhost)
+role :db, %w(controller@localhost)
 
 # Configuration
 # =============
@@ -33,8 +32,6 @@ role :db, %w{controller@localhost}
 # For available Capistrano configuration variables see the documentation page.
 # http://capistranorb.com/documentation/getting-started/configuration/
 # Feel free to add new variables to customise your setup.
-
-
 
 # Custom SSH Options
 # ==================

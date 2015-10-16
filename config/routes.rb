@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
-  resources :shift_details
+  resources :shift_details do
+    collection do
+      get 'list'
+    end
+  end
   get 'home/index'
 
-  devise_for :users, controllers:{registrations: 'users/registrations'}
+  devise_for :users, controllers: { registrations: 'users/registrations' }
   resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -12,7 +16,7 @@ Rails.application.routes.draw do
   root 'home#index'
 
   # Example of regular route:
-  #get 'users/index' => 'user#index'
+  # get 'users/index' => 'user#index'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
